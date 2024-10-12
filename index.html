@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/c4b677e9fc.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,14 +18,35 @@
                     <li><a href="#" class="nav_link">Contact</a></li>
                     <li><a href="#" class="nav_link nav_link-primary">Books</a></li>
                 </ul>
-            </nav>
-        </div>
+                <button class="btn-menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu-backdrop">
+                    <button class="btn-menu btn_menu-close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu-links">
+                        <li class="menu-list">
+                            <a href="" class="menu-link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="#features" class="menu-link" onclick="closeMenu()">Book</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="" class="menu-link no-cursor" onclick="closeMenu()">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <header>
             <div class="header_container">
                 <div class="header_description">
                     <h1>Florida Most wanted library</h1>
                     <h2>find your best <span class="purple">Library</span></h2>
-                    <button class="btn">Browse Books</button>
+                    <a href="#features">
+                        <button class="btn">Browse Books</button>
+                    </a>
                 </div>
                 <figure class="header_img-wrapper">
                     <img src="./assets/Undraw_Books.svg" alt="">
@@ -306,7 +328,9 @@
             <div class="container">
                 <div class="row row-center">
                     <h2>Explore more <span class="purple">Books</span></h2>
-                    <button class="btn">Browse Books</button>
+                    <a href="#features">
+                        <button class="btn">Browse Books</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -316,12 +340,12 @@
         <div class="container">
             <div class="row row-center">
                 <a href="#">
-                    <figure>
+                    <figure class="footer-logo">
                         <img src="assets/Library.svg" alt="" class="footer_logo-img">
                     </figure>
                 </a>
                 <div class="footer_list">
-                    <a href="" class="footer-link">Home</a>
+                    <a href="#landing" class="footer-link">Home</a>
                     <a href="" class="footer-link no-cursor">About</a>
                     <a href="" class="footer-link">Books</a>
                     <a href="" class="footer-link no-cursor">Contact</a>
